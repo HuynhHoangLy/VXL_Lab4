@@ -1,0 +1,6 @@
+../Core/Src/display.c:192:6:Led0	8	static
+../Core/Src/display.c:195:6:Led1	8	static
+../Core/Src/display.c:198:6:Led2	8	static
+../Core/Src/display.c:201:6:Led3	8	static
+../Core/Src/display.c:204:6:Led4	8	static
+../Core/Src/display.c:207:6:Led5	8	static
