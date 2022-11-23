@@ -68,4 +68,7 @@ void getKeyInput() {
 			}
 		}
 	}
+	if (isButtonPressed()) {
+		HAL_GPIO_TogglePin(led5_GPIO_Port, led5_Pin);
+	}
 }

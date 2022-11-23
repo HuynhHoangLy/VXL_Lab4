@@ -10,7 +10,7 @@
 
 #include "main.h"
 
-#define	SCH_MAX_TASKS	5
+#define	SCH_MAX_TASKS	6
 #define NO_TASK_ID	0
 
 void SCH_Init(void);

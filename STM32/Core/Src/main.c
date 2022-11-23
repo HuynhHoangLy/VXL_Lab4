@@ -95,7 +95,6 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
 
   SCH_Init();
-  HAL_Delay(500);
 
 //  setTimer0(10);
 //  setTimer1(10);
@@ -110,6 +109,7 @@ int main(void)
   SCH_Add_Task(Led2, 0, 150);
   SCH_Add_Task(Led3, 0, 200);
   SCH_Add_Task(Led4, 0, 250);
+  SCH_Add_Task(getKeyInput, 0, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -119,10 +119,6 @@ int main(void)
   while (1)
   {
 	  SCH_Dispatch_Tasks();
-	  if (isButtonPressed()) {
-		  SCH_Add_Task(Led5, 0, 500);
-	  }
-	  else SCH_Delete_Task(5);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -249,7 +245,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim) {
 	SCH_Update();
-	getKeyInput();
 	timerRun();
 }
 /* USER CODE END 4 */
